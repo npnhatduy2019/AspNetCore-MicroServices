@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "/xhEV5tA2MMiprN0YLzInxqv8fI5U85Si+bM6wrTfT4vi1A3wPpcqXXYwX+lHB4EFZQDxkVrEljAxZ3uGgyA1w==",
+  "success": true,
+  "projectFilePath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\Buildingblocks\\Common.Logging\\Common.Logging.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.2\\microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
+    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.2\\microsoft.windowsdesktop.app.ref.7.0.2.nupkg.sha512",
+    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.2\\microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

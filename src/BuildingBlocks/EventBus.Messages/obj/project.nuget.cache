@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "talW6TB1HptMUyaeTACiagvrQVv2MVUuL0hUGwpgaMiJb4iXjbECxaLo0E/+PL6opZqKPRxKaD6C6xe4gr60Hw==",
+  "success": true,
+  "projectFilePath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\Buildingblocks\\EventBus.Messages\\EventBus.Messages.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.2\\microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
+    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.2\\microsoft.windowsdesktop.app.ref.7.0.2.nupkg.sha512",
+    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.2\\microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
