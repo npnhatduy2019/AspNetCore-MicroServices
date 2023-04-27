@@ -1,0 +1,112 @@
+version: '3.8'
+
+services:
+  orderdb:
+    container_name: orderdb
+    user: root
+    environment:
+      - MSSQL_SA_PASSWORD=Nh@td11y
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
+    restart: always
+    ports:
+      - "1435:1433"
+    volumes:
+      - order_data:/var/opt/mssql/
+
+
+  #mysqldb
+  productdb:
+    container_name: productdb
+    environment:
+      - MYSQL_ROOT_PASSWORD=Nh@td11y
+    restart: always
+    volumes:
+      - product_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+
+  #customerdb prostgres
+
+  customerdb:
+    container_name: customerdb
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=Nh@td11y
+      - POSTGRES_DB=DiscountDb
+    restart: always
+    volumes:
+      - customer_data:/var/lib/prostgresql/data
+    ports:
+      - "5433:5432"
+
+  #basket redis
+
+  basketdb:
+    container_name: basketdb
+    restart: always
+    ports:
+      - "6379:6379"
+
+  #inventorydb mongo
+
+  inventorydb:
+    container_name: inventorydb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+  
+  #infrastructure section
+
+  rabbitmq:
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  pgadmin:
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@microsevices.com
+      - PGADMIN_DEFAULT_PASSWORD=Nh@td11y
+    restart: always
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/root/.pgadmin
+
+  portainer:
+    container_name: portainer
+    restart: always
+    ports:
+      - "8080:8000"
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+  #elasticsearch
+
+  elasticsearch:
+    container_name: elasticsearch
+    environment:
+      - xpart.monitoring.enable=true
+      - xpart.watcher.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/user/share/elasticsearch/data
+
+  kibana:
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"
