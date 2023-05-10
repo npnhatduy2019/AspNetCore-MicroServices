@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\Buildingblocks\\Common.Logging\\Common.Logging.csproj": {}
+    "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\Common.Logging.csproj": {}
   },
   "projects": {
-    "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\Buildingblocks\\Common.Logging\\Common.Logging.csproj": {
+    "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\Common.Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\Buildingblocks\\Common.Logging\\Common.Logging.csproj",
+        "projectUniqueName": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\Common.Logging.csproj",
         "projectName": "Common.Logging",
-        "projectPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\Buildingblocks\\Common.Logging\\Common.Logging.csproj",
+        "projectPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\Common.Logging.csproj",
         "packagesPath": "C:\\Users\\DuyNguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\Buildingblocks\\Common.Logging\\obj\\",
+        "outputPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\Temp\\Shared\\NuGetPackages",
@@ -46,6 +46,20 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog.Formatting.Compact": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
