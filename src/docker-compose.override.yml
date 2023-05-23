@@ -16,15 +16,29 @@ services:
 
 
   #mysqldb
-  productdb:
-    container_name: productdb
+  # productdb:
+  #   container_name: productdb
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=Nh@td11y
+  #   restart: always
+  #   volumes:
+  #     - product_data:/var/lib/mysql
+  #   ports:
+  #     - "3307:3306"
+  productdbsql:
+    container_name: productdbsql
+    command: --default-authentication-plugin=mysql_native_password
     environment:
-      - MYSQL_ROOT_PASSWORD=Nh@td11y
+      MYSQL_ROOT_PASSWORD: "Nh@td11y"
+      MYSQL_TCP_PORT: 3306
+      MYSQL_DATABASE: ProductDB
     restart: always
     volumes:
       - product_data:/var/lib/mysql
     ports:
       - "3307:3306"
+    networks:
+      - default
 
   #customerdb prostgres
 
@@ -33,39 +47,40 @@ services:
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=Nh@td11y
-      - POSTGRES_DB=DiscountDb
+      - POSTGRES_DB=CustomerDB
     restart: always
     volumes:
       - customer_data:/var/lib/prostgresql/data
     ports:
       - "5433:5432"
 
-  #basket redis
+#   #basket redis
 
-  basketdb:
-    container_name: basketdb
-    restart: always
-    ports:
-      - "6379:6379"
+#   basketdb:
+#     container_name: basketdb
+#     restart: always
+#     ports:
+#       - "6379:6379"
 
-  #inventorydb mongo
-
-  inventorydb:
-    container_name: inventorydb
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
+#   #inventorydb mongo
+# #inventorydb: mongo
+#   inventorydb:
+#     container_name: inventorydb
+#     restart: always
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo_data:/data/db
+ 
   
-  #infrastructure section
+#   #infrastructure section
 
-  rabbitmq:
-    container_name: rabbitmq
-    restart: always
-    ports:
-      - "5672:5672"
-      - "15672:15672"
+#   rabbitmq:
+#     container_name: rabbitmq
+#     restart: always
+#     ports:
+#       - "5672:5672"
+#       - "15672:15672"
 
   pgadmin:
     container_name: pgadmin
@@ -82,31 +97,67 @@ services:
     container_name: portainer
     restart: always
     ports:
-      - "8080:8000"
-      - "9000:9000"
+        - "8080:8000"
+        - "9000:9000"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
+        - /var/run/docker.sock:/var/run/docker.sock
+        - portainer_data:/data
 
-  #elasticsearch
+#   #elasticsearch
 
-  elasticsearch:
-    container_name: elasticsearch
+#   # elasticsearch:
+#   #   container_name: elasticsearch
+#   #   environment:
+#   #     - xpart.monitoring.enabled=true
+#   #     - xpart.watcher.enabled=false
+#   #     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"        
+#   #     - discovery.type=single-node
+#   #   ports:
+#   #     - "9200:9200"
+#   #   volumes:
+#   #     - elasticsearch_data:/usr/share/elasticsearch/data
+
+#   elasticsearch:
+#     container_name: elasticsearch
+#     environment:
+#       - xpack.monitoring.enabled=true
+#       - xpack.watcher.enabled=false
+#       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#       - discovery.type=single-node
+#     ports:
+#       - "9200:9200"
+#     volumes:
+#       - elasticsearch_data:/usr/share/elasticsearch/data
+
+#   kibana:
+#     container_name: kibana
+#     environment:
+#       - ELASTICSEARCH_URL=http://elasticsearch:9200
+#     depends_on:
+#       - elasticsearch
+#     ports:
+#       - "5601:5601"
+
+#Microservices Section
+  # product.api:
+  #   container_name: product.api
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #     - ASPNETCORE_URLS=http://+:80
+  #     - "ConnectionStrings:defaultConnectionString=Server=productdb;Port=3307;Database=ProductDB;Uid=root;pwd=Nh@td11y"
+  #   depends_on:
+  #     - productdb
+  #   ports:
+  #     - "6002:80"
+  #   restart: always#microservices api sections
+  product.api:
+    container_name: product.api
     environment:
-      - xpart.monitoring.enable=true
-      - xpart.watcher.enabled=false
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - discovery.type=single-node
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - "ConnectionStrings:DefaultConnectionString=Server=productdbsql;Port=3306;Database=ProductDB;Uid=root;Pwd=Nh@td11y;"
+    depends_on: 
+      - productdbsql
     ports:
-      - "9200:9200"
-    volumes:
-      - elasticsearch_data:/user/share/elasticsearch/data
-
-  kibana:
-    container_name: kibana
-    environment:
-      - ELASTICSEARCH_URL=http://elasticsearch:9200
-    depends_on:
-      - elasticsearch
-    ports:
-      - "5601:5601"
+      - "6002:80"
+    restart: always

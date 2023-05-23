@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\Contracts\\Contracts.csproj": {}
+    "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Contracts\\Contracts.csproj": {}
   },
   "projects": {
-    "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\Contracts\\Contracts.csproj": {
+    "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\Contracts\\Contracts.csproj",
+        "projectPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\DuyNguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\Contracts\\obj\\",
+        "outputPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\Temp\\Shared\\NuGetPackages",
@@ -63,26 +63,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.2, 7.0.2]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.2, 7.0.2]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.2, 7.0.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.3.23178.7\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

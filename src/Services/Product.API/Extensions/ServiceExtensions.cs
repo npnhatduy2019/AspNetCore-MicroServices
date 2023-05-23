@@ -1,8 +1,13 @@
 
+using AutoMapper;
+using Contracts.Common.Interfaces;
+using Infrastructure.Common;
 using Microsoft.EntityFrameworkCore;
 using MySql.Data.MySqlClient;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Product.API.Persistence;
+using Product.API.Repositories;
+using Product.API.Repositories.Interfaces;
 
 namespace Product.API.Extensions
 {
@@ -18,13 +23,17 @@ namespace Product.API.Extensions
 
             //mysql 
             services.ConfigureProductDbContext(configuration);
+
+            services.AddInfrastructureServices();
+
+            services.AddAutoMapper(cfg => cfg.AddProfile(new MappingProfile()));
             
             return services;
        }
 
        public static IServiceCollection ConfigureProductDbContext(this IServiceCollection services, IConfiguration configuration)
        {
-            var connectionString = configuration.GetConnectionString("defaultConnectionString");
+            var connectionString = configuration.GetConnectionString("DefaultConnectionString");
             var builder = new MySqlConnectionStringBuilder(connectionString);
             services.AddDbContext<ProductContext>(options => options.UseMySql(builder.ConnectionString, 
                     ServerVersion.AutoDetect(builder.ConnectionString), e => {
@@ -42,5 +51,15 @@ namespace Product.API.Extensions
             //     );
             return services;
        }
+
+       public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
+       {
+            return services.AddScoped(typeof(IRepositoryBaseAsync<,,>),typeof(RepositoryBaseAsync<,,>))
+                    .AddScoped(typeof(IUnitOfWork<>),typeof(UnitOfWok<>))
+                    .AddScoped<IProductRepository,ProductRepository>();
+                    
+       }
     }
+
+    
 }

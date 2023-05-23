@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ir1HzOfALgFdxU8iDjUrk2NertryIkxQcxal93pMVpIoztCs6QNLJcHn5ggroq1UTdJbq7C0PwWKPaZ3HLSnxA==",
+  "dgSpecHash": "mv87/hGtUuzKjf2yAMfu3N2RcHtoicr75/W/CS7+szJWeU+Ysu0Peih8kBH1VmWybP81bbL+du0A2WzrHWtMkg==",
   "success": true,
   "projectFilePath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\Common.Logging.csproj",
   "expectedPackageFiles": [
@@ -27,10 +27,7 @@
     "C:\\Users\\DuyNguyen\\.nuget\\packages\\serilog.sinks.console\\4.0.1\\serilog.sinks.console.4.0.1.nupkg.sha512",
     "C:\\Users\\DuyNguyen\\.nuget\\packages\\serilog.sinks.debug\\2.0.0\\serilog.sinks.debug.2.0.0.nupkg.sha512",
     "C:\\Users\\DuyNguyen\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
-    "C:\\Users\\DuyNguyen\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512",
-    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.2\\microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
-    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.2\\microsoft.windowsdesktop.app.ref.7.0.2.nupkg.sha512",
-    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.2\\microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
+    "C:\\Users\\DuyNguyen\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

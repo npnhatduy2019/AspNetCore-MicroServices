@@ -6,13 +6,20 @@ namespace Product.API.Extensions
         {
             app.UseSwagger();
             app.UseSwaggerUI();
-            //app.UseRouting();
+            app.UseRouting();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
-            app.MapControllers();
+           app.UseEndpoints(endpoints =>
+                    {
+                        endpoints.MapControllers();
+                        endpoints.MapControllerRoute(
+                            name: "default",
+                            pattern: "{controller=Home}/{action=Index}/{id?}"); // Thêm dòng này
+                    });
+
         }
 
     }

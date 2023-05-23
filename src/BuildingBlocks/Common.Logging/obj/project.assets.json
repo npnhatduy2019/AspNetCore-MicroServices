@@ -866,11 +866,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\common.logging\\Common.Logging.csproj",
+      "projectUniqueName": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\Common.Logging.csproj",
       "projectName": "Common.Logging",
-      "projectPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\common.logging\\Common.Logging.csproj",
+      "projectPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\Common.Logging.csproj",
       "packagesPath": "C:\\Users\\DuyNguyen\\.nuget\\packages\\",
-      "outputPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\common.logging\\obj\\",
+      "outputPath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Common.Logging\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\Temp\\Shared\\NuGetPackages",
@@ -930,26 +930,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.3.23178.7\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

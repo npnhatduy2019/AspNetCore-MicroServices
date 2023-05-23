@@ -11,6 +11,8 @@ namespace Contracts.Common.Interfaces
         IQueryable<T> FindAll(bool trackChanges = false);
         IQueryable<T> FindAll(bool trackChanges = false, params Expression<Func<T, object>>[] includeProperties);
 
+
+        
         IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool tranckChanges = false);
 
         IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool tranckChanges = false, 

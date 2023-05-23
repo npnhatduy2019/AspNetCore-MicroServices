@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ayzPV6hwQJlSCCY41MTFn4dqx0JPko7nqgZz86ikp2BcXtVcBelCgznWo68FkAh/T6PhtICXGFnJE2P1I408Vw==",
+  "dgSpecHash": "XAw4lKee/nIz0BWOna4jc4Kl0GjGFSCwNoXPreXJEd8mMvCGZuK0/+bE3H21zly9rbrADKYgnmJEzZObx/zOng==",
   "success": true,
-  "projectFilePath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\buildingblocks\\Shared\\Shared.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.2\\microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
-    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.2\\microsoft.windowsdesktop.app.ref.7.0.2.nupkg.sha512",
-    "C:\\Users\\DuyNguyen\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.2\\microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\2023\\MicroService\\AspNetCore-MicroServices\\src\\BuildingBlocks\\Shared\\shared.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

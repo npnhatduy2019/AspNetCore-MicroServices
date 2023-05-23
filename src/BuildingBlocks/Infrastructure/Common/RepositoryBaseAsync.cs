@@ -43,6 +43,7 @@ namespace Infrastructure.Common
         }
 
         public Task UpdateListAsync(IEnumerable<T> entities) => context.Set<T>().AddRangeAsync(entities);
+        
         public Task DeleteAsync(T entity)
         {
             context.Set<T>().Remove(entity);
